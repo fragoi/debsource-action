@@ -1,3 +1,3 @@
-FROM ghcr.io/fragoi/debuild:24.1
+FROM ghcr.io/fragoi/debuild:24.2
 
 ENTRYPOINT [ "source.sh" ]
