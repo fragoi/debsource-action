@@ -1,0 +1,17 @@
+name: Dpkg Source
+description: Build a debian source package
+
+inputs:
+  source_options:
+    description: Additional options for dpkg-source
+    required: false
+  genchanges_options:
+    description: Additional options for dpkg-genchanges
+    required: false
+
+runs:
+  using: docker
+  image: Dockerfile
+  env:
+    SOURCE_OPTS: ${{ inputs.source_options }}
+    GENCHANGES_OPTS: ${{ inputs.genchanges_options }}
