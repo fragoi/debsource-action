@@ -25,7 +25,7 @@ jobs:
       NEW_VERSION:
     steps:
       - uses: actions/checkout@v6
-      - uses: fragoi/bash-actions@main
+      - uses: fragoi/bash-actions@v2
 
       - name: Create release
         env:
@@ -53,7 +53,7 @@ jobs:
       - uses: actions/checkout@v6
         with:
           ref: ${{ needs.release.outputs.major_branch }}
-      - uses: fragoi/bash-actions@main
+      - uses: fragoi/bash-actions@v2
       - name: Update major branch
         run: |
           updateBranch main
