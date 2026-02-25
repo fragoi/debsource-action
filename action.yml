@@ -11,7 +11,7 @@ inputs:
 
 runs:
   using: docker
-  image: docker://ghcr.io/fragoi/debuild:24.3
+  image: docker://ghcr.io/fragoi/debuild:u24.0
   entrypoint: source.sh
   env:
     SOURCE_OPTS: ${{ inputs.source_options }}
